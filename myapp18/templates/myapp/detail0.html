@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+{% block title %}{{name}}!{% endblock %}
+
+{% block body_block %}
+
+<p><b>Warehouse:</b>: {{ warehouse}}</p>
+<p><b>Name:</b>: {{ name}}</p>
+    <h2>List of Products</h2>
+    {% if prod_list %}
+        <ol>
+            {% for prod  in prod_list %}
+                <a><li> {{ prod.name}} </li></a>
+            {% endfor %}
+        </ol>
+
+    {% endif %}
+
+   <p><a href = "{% url 'myapp18:index' %}">Click here to return to main page</a></p>
+
+
+{% endblock %}

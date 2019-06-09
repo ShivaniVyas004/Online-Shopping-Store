@@ -1,0 +1,23 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+    <body>
+<form method="post">{% csrf_token %}
+
+    <div class="container">
+        <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+        <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+
+      <button type="submit">Login</button>
+
+
+        <p><button type="button" class="btn btn-default" value="Forgot Password" onClick="window.location.href='{% url 'myapp18:forgotpassword' %}'">Forgot Password</button></p>
+
+
+    </div>
+  </form>
+    </body>
+{% endblock %}

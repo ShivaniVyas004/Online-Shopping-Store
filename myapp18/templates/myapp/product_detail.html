@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+    <body>
+        <h2>{{ product.name }}</h2>
+        <p><strong>Price: </strong> {{ product.price }}</p>
+        <p><strong>Number of people interested: </strong> {{ product.interested }}</p>
+        {% if product.available %}
+        {% else %}
+            <strong>This product is out of stock!</strong>
+        {% endif %}
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+
+
+        <p><a href = "{% url 'myapp18:index' %}">Click here to return to main page</a></p>
+
+    </form>
+    </body>
+{% endblock %}

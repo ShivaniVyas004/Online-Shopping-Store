@@ -1,0 +1,9 @@
+{% extends 'myapp/base.html' %}
+{% block title %}{{name}}!{% endblock %}
+{% block body_block %}
+<body>
+<h3>{{ msg }}</h3>
+
+        <p><a href = "{% url 'myapp18:index' %}">Click here to return to main page</a></p>
+</body>
+{% endblock %}

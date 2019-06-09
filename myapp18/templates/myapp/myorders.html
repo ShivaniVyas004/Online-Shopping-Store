@@ -1,0 +1,33 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+
+        <h2>My orders</h2>
+
+        {% if myorder %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+            <th>Product Name</th>
+            <th>Units</th>
+            <th>Status</th>
+            <th>Updated on</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for order  in myorder %}
+
+                <tr><td>{{ order.product.name}}</td>
+                <td> {{ order.num_units}} </td>
+                <td> {{ order.order_status}} </td>
+                <td> {{ order.status_date}} </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+        {% else %}
+            <strong>You have no orders!</strong>
+        {% endif %}
+{% endblock %}

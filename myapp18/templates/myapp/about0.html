@@ -1,0 +1,9 @@
+{% extends 'myapp/base.html' %}
+{% block title %}About Page{%endblock %}
+{% block body_block %}
+<body>
+<h1>This is an Online Store APP.</h1>
+<p>Number of page visits: {{ about_visits }}</p>
+</body>
+<p><a href = "{% url 'myapp18:index' %}">Click here to return to main page</a></p>
+{% endblock %}

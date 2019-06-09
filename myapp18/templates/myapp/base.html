@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}"/>
+        <title>Online Store APP - {% block title %}Welcome!{% endblock %}</title>
+    </head>
+
+    <body>
+        <div>
+
+            {% block body_block %}***{% endblock %}
+        </div>
+
+          <div>
+            <ul>
+
+                <p><a href="{% url 'myapp18:about'%}">About page</a></p>
+                <p><a href="{% url 'myapp18:products'%}">Products</a></p>
+                <p><a href="{% url 'myapp18:myorders' %}">Myorders</a></p>
+                <p><a href="{% url 'myapp18:index'%}">Click here to return to main page</a></p>
+
+
+
+            </ul>
+        </div>
+    </body>
+</html>
+

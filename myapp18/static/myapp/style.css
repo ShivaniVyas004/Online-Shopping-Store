@@ -1,0 +1,44 @@
+
+.hbar1 {
+	 display: inline;
+	 margin :15px;
+
+
+
+}
+
+.footer{
+    position: Center;
+    bottom: 0;
+    width: 516px;
+    height: 850px;
+    background-image:url('ABC.jpg');
+}
+
+h1,h2{
+font-style: italic;
+
+
+text-align: left;
+color:#ffffff;
+background-image:url('ABC.jpg');
+
+-webkit-margin-before: 10px!important;
+    -webkit-margin-after: 10px !important;
+    -webkit-margin-start: 10px !important;
+    -webkit-margin-end: 10px !important;
+	    line-height: 3.8!important;
+}
+
+/*.header{*/
+/*background-color:lightblue;*/
+
+/*}*/
+
+/*ul.ulli {*/
+ /*background-color:lightpink;*/
+/*}*/
+#para {
+ font-style: italic;
+
+}

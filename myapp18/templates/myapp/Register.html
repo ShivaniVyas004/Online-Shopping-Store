@@ -1,0 +1,37 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{##}
+{#</body>#}
+{#</html>#}
+
+{#{% extends "myapp/base.html" %}#}
+{##}
+{#{% block body_block %}#}
+{##}
+{##}
+{#  <h1>Create an account</h1>#}
+{#   <form action="{% url 'myapp18:Register' %}" method="post">#}
+{#        {% csrf_token %}#}
+{#    {{ form.as_p }}#}
+{#      <input type="submit" value="Create the account">#}
+{#  </form>#}
+{#{% endblock %}#}
+
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+    <body>
+<form method="post">{% csrf_token %}
+
+    <div class="container">
+      {{ form.as_p }}
+      <button type="submit">Register</button>
+    </div>
+  </form>
+    </body>
+{% endblock %}
